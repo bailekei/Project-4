@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.io.*;
 import java.text.ParseException;
@@ -8,11 +9,12 @@ import java.util.GregorianCalendar;
 
 public class ListEngine extends AbstractListModel {
 
-    private ArrayList<Auto> listAutos;
+    //private ArrayList<Auto> listAutos;
+    private MySingleLinkedList listAutos;
 
     public ListEngine() {
         super();
-        listAutos = new ArrayList<Auto> ();
+        listAutos = new MySingleLinkedList ();
         createList();
     }
 
@@ -57,7 +59,7 @@ public class ListEngine extends AbstractListModel {
             FileInputStream fis = new FileInputStream(filename);
             ObjectInputStream is = new ObjectInputStream(fis);
 
-            listAutos = (ArrayList<Auto>) is.readObject();
+            listAutos = (MySingleLinkedList) is.readObject();
             fireIntervalAdded(this, 0, listAutos.size() - 1);
             is.close();
         } catch (Exception ex) {
