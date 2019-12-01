@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class MySingleLinkedList implements Serializable
+public class MySingleLinkedList<Auto> implements Serializable
 {
     private Node top;
     private Node tail;
@@ -21,6 +21,7 @@ public class MySingleLinkedList implements Serializable
     }
 
     public void add(Auto s) {
+
         //  Order is: (First) List all Cars in bought by date order
         //  followed by (second) List all Trucks in bought by order.
 
@@ -38,6 +39,11 @@ public class MySingleLinkedList implements Serializable
     }
 
     public String toString() {
+        Node temp = top;
+        while (temp != null) {
+            System.out.println(temp.getNext());
+            temp = temp.getNext();
+        }
         return null;
     }
 

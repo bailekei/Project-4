@@ -3,7 +3,6 @@ import org.junit.Test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -18,7 +17,7 @@ public class MySingleLinkedListTest {
     private Truck truck2;
     private Truck truck3;
 
-    MySingleLinkedList list = new MySingleLinkedList();
+    MySingleLinkedList<Auto> list = new MySingleLinkedList<Auto>();
 
     @Before
     public void createList() {
