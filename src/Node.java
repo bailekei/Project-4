@@ -9,11 +9,13 @@ public class Node implements Serializable {
         this.next = next;
     }
 
+
     public Auto getData() {
         return data;
     }
 
     public void setData(Auto data) {
+
         this.data = data;
     }
 
@@ -22,6 +24,7 @@ public class Node implements Serializable {
     }
 
     public void setNext(Node next) {
+
         this.next = next;
     }
 }
