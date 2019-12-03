@@ -17,7 +17,7 @@ public class MySingleLinkedListTest {
     private Truck truck2;
     private Truck truck3;
 
-    MySingleLinkedList<Auto> list = new MySingleLinkedList<Auto>();
+    MySingleLinkedList list = new MySingleLinkedList ();
 
     @Before
     public void createList() {
