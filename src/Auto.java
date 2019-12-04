@@ -3,7 +3,13 @@
 import java.io.Serializable;
 import java.util.GregorianCalendar;
 import java.util.Objects;
-
+/***********************************************************************************************************************
+ * CIS 162 Project 4
+ * Auto class that creates the information for each of the autos
+ *
+ * @author Keilani Bailey and Shayla Hinkley
+ * @version Project 4: December 4th, 2019
+ **********************************************************************************************************************/
 public abstract class
 Auto implements Serializable {
 

@@ -4,11 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.GregorianCalendar;
 
-/*****************************************************************
+/***********************************************************************************************************************
+ * CIS 162 Project 4
+ * GUI that gives the actual layout of the GUI
  *
- * Maintains the GUI1024 for the red box rental store
- *
- *****************************************************************/
+ * @author Keilani Bailey and Shayla Hinkley
+ * @version Project 4: December 4th, 2019
+ **********************************************************************************************************************/
 public class GUICarDealer extends JFrame implements ActionListener {
     /**
      * Holds menu bar

@@ -5,38 +5,76 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
+/***********************************************************************************************************************
+ * CIS 162 Project 4
+ *List engine class that the GUI uses to get data
+ *
+ * @author Keilani Bailey and Shayla Hinkley
+ * @version Project 4: December 4th, 2019
+ **********************************************************************************************************************/
 public class ListEngine extends AbstractListModel {
 
-    //private ArrayList<Auto> listAutos;
+    /** instance variable that refers to the */
     private MySingleLinkedList listAutos;
 
+
+    /*******************************************************************************************************************
+     * Constructor method that creates a linked list
+     ******************************************************************************************************************/
     public ListEngine() {
         super();
         listAutos = new MySingleLinkedList ();
         createList();
     }
 
+
+    /*******************************************************************************************************************
+     * Method that removes the auto from the table
+     *
+     * @param i type integer - the index that you want to remove
+     * @return unit type Auto - the auto that is being removed
+     ******************************************************************************************************************/
     public Auto remove(int i) {
         Auto unit = listAutos.remove(i);
         fireIntervalRemoved(this, 0, listAutos.size());
         return unit;
     }
 
+
+    /*******************************************************************************************************************
+     * Method that adds an Auto the screen / program
+     *
+     * @param a type Auto - the auto that is being added
+     ******************************************************************************************************************/
     public void add (Auto a) {
         listAutos.add(a);
         fireIntervalAdded(this, 0, listAutos.size());
     }
 
+
+    /*******************************************************************************************************************
+     * Method that gets a specific index within the program table and pulls the index within the linked list
+     *
+     * @param i type int - the index of the table auto
+     * @return the data of the auto
+     ******************************************************************************************************************/
     public Auto get (int i) {
         return listAutos.get(i);
     }
 
+
+    /*******************************************************************************************************************
+     * Method that gets the element in the table that the user chose and removes it
+     ******************************************************************************************************************/
     public Object getElementAt(int arg0) {
         Auto unit = listAutos.get(arg0);
         return unit.toString();
     }
 
+
+    /*******************************************************************************************************************
+     * Constructor method that creates a linked list
+     ******************************************************************************************************************/
     public int getSize() {
         return listAutos.size();
     }

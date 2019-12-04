@@ -7,7 +7,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
+/***********************************************************************************************************************
+ * CIS 162 Project 4
+ * Class that controls the bought car dialog
+ *
+ * @author Keilani Bailey and Shayla Hinkley
+ * @version Project 4: December 4th, 2019
+ **********************************************************************************************************************/
 public class BoughtCarDialog extends JDialog implements ActionListener {
     private JTextField txtName;
     private JTextField txtDate;

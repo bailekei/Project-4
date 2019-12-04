@@ -1,6 +1,12 @@
 import java.text.DateFormat;
 import java.util.GregorianCalendar;
-
+/***********************************************************************************************************************
+ * CIS 162 Project 4
+ *  Truck class that gives Autos that are trucks all of its features
+ *
+ * @author Keilani Bailey and Shayla Hinkley
+ * @version Project 4: December 4th, 2019
+ **********************************************************************************************************************/
 public class Truck extends Auto {
 
     private boolean FourByFour;

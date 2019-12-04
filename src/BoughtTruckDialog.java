@@ -7,7 +7,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
+/***********************************************************************************************************************
+ * CIS 162 Project 4
+ * Class that creates the bought truck dialog box in the GUI
+ *
+ * @author Keilani Bailey and Shayla Hinkley
+ * @version Project 4: December 4th, 2019
+ **********************************************************************************************************************/
 public class BoughtTruckDialog extends JDialog implements ActionListener {
     private JTextField txtName;
     private JTextField txtDate;

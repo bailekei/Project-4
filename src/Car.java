@@ -1,7 +1,13 @@
 import java.text.DateFormat;
 import java.util.GregorianCalendar;
 import java.util.Objects;
-
+/***********************************************************************************************************************
+ * CIS 162 Project 4
+ * Class that extends Auto and gives the Car all of its features to be used throughout the program
+ *
+ * @author Keilani Bailey and Shayla Hinkley
+ * @version Project 4: December 4th, 2019
+ **********************************************************************************************************************/
 public class Car extends Auto {
 
     private boolean turbo;
