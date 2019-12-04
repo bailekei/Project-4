@@ -1,3 +1,5 @@
+import javafx.scene.chart.ScatterChart;
+
 import java.io.Serializable;
 
 /***********************************************************************************************************************
@@ -53,77 +55,117 @@ public class MySingleLinkedList implements Serializable
         Node temp = top;
 
         // if the list is empty just add
-        if (top == null) {
+        if (temp == null) {
             top = new Node(s, null);
+            System.out.println("Testing");
             return;
 
             //if the list is not empty
         }else {
 
             //check the top first, if is car
-            if(top.getData() instanceof Car ) {
+            if(temp.getData() instanceof Car ) {
 
                 //then check the type of s, which you want to add
                 //if s is car, then compare the date
                 if(s instanceof Car){
 
                     //if the top is after s, just add to the top
-                    if (top.getData().getBoughtOn().after(s.getBoughtOn())) {
-                        top = new Node(s, temp);
+                    if (temp.getData().getBoughtOn().after(s.getBoughtOn())) {
+                        temp = new Node(s, temp);
+                        System.out.println("yeet");
                         return;
 
                         //else use while loop to loop through the list, then add
                     }else{
-                        while(top.getNext() != null && !top.getNext().getData().getBoughtOn().after(s.getBoughtOn()) ){
-                            top = top.getNext();
-                            temp = top;
+                        System.out.println("rrrr");
+                        while(temp.getNext() != null && !temp.getNext().getData().getBoughtOn().after(s.getBoughtOn()) ){
+                            temp = temp.getNext();
+//                            temp = top;
+//                            Node newAutoNode = new Node(s, temp);
+//                            temp = newAutoNode;
+                            System.out.println("qqqqq");
+                            return;
                         }
 
                         //means this is not the last one
-                        if(top.getNext() != null)
-                            top = new Node(s, temp);
+                        if(temp.getNext() != null)
+                            temp = new Node(s, temp);
 
                             //this is the last one
                         else
-                            top.setNext(new Node(s, null));
+                            temp.setNext(new Node(s, null));
                         return;
                     }
 
                     //if the type of s is truck, just use the while loop to loop through car
                 }else{
-                    while(top.getNext() != null && top.getNext().getData() instanceof Car ){
-                        top = top.getNext();
-                        temp = top;
+                    System.out.println("Else Test");
+                    while(temp.getNext() != null && top.getNext().getData() instanceof Car ){
+                        temp = temp.getNext();
                     }
 
                     //if current is not tail, then tail is truck
-                    if(top.getNext() != null){
-
+                    if(temp.getNext() != null){
+                        System.out.println("If Test");
                         //now it is truck
-                        top = top.getNext();
-                        temp = top;
+                        temp = temp.getNext();
 
                         //same process to compare date with the cars
-                        if (top.getData().getBoughtOn().after(s.getBoughtOn())) {
-                            top = new Node(s, temp);
+                        if (temp.getData().getBoughtOn().after(s.getBoughtOn())) {
+                            System.out.println("if Test 2");
+                            temp = new Node(s, temp);
                             return;
                         }else{
-
-                            while(!top.getNext().getData().getBoughtOn().after(s.getBoughtOn())){
-                                top = top.getNext();
-                                temp = top;
+                            System.out.println("Else Test");
+                            while(!temp.getNext().getData().getBoughtOn().after(s.getBoughtOn())){
+                                temp = temp.getNext();
                             }
-                            top = new Node(s, temp);
+                            temp = new Node(s, temp);
                             return;
                         }}
 
                     //else there is no truck on the list, just add into tail
                     else{
-                        top.setNext(new Node(s, null));
+                        temp.setNext(new Node(s, null));
                     }
                 }
             }
-        }
+            System.out.println("The end");
+            }
+//        size++;
+//        Node temp = top;
+//
+//        // no list
+//        if (top == null) {
+//            top = new Node(s, null);
+//            System.out.println("Testing");
+//            return;
+//        }
+//
+//        //new person is set to the top
+//        if (top.getData().getBoughtOn().after(s.getBoughtOn())) {
+//            top = new Node(s, top);
+//            System.out.println("Test2");
+//            return;
+//        }
+//
+//
+//        //iterate thru list until we find the spot
+//        while (temp.getNext() != null) {
+//            if (temp.getNext().getData().getBoughtOn().after(s.getBoughtOn())) {
+//                Node newAutoNode = new Node(s, temp.getNext());
+//                System.out.println("T3");
+//                newAutoNode=temp.getNext();
+//                return;
+//            }
+//            System.out.println("T4");
+//            temp = temp.getNext();
+//        }
+//        Node newAutoNode = new Node(s, temp.getNext());
+//        newAutoNode=temp.getNext();
+//        System.out.println("T5");
+//        return;
     }
 
     /*******************************************************************************************************************
@@ -151,13 +193,16 @@ public class MySingleLinkedList implements Serializable
        if(index < size()-1) {
           while(current != null) {
           if(count == index) {
-              return(current.getData());
+              break;
           }
           count++;
           current = current.getNext();
+              System.out.println("1");
           }
+          System.out.println("2");
        }
-       return current.getData();
+        System.out.println("3");
+        return(current.getData());
     }
 
     /*******************************************************************************************************************
