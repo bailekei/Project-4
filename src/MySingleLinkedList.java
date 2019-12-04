@@ -108,6 +108,7 @@ public class MySingleLinkedList implements Serializable
                     //if current is not tail, then tail is truck
                     if(temp.getNext() != null){
                         System.out.println("If Test");
+
                         //now it is truck
                         temp = temp.getNext();
 
@@ -123,7 +124,8 @@ public class MySingleLinkedList implements Serializable
                             }
                             temp = new Node(s, temp);
                             return;
-                        }}
+                        }
+                    }
 
                     //else there is no truck on the list, just add into tail
                     else{
@@ -132,40 +134,7 @@ public class MySingleLinkedList implements Serializable
                 }
             }
             System.out.println("The end");
-            }
-//        size++;
-//        Node temp = top;
-//
-//        // no list
-//        if (top == null) {
-//            top = new Node(s, null);
-//            System.out.println("Testing");
-//            return;
-//        }
-//
-//        //new person is set to the top
-//        if (top.getData().getBoughtOn().after(s.getBoughtOn())) {
-//            top = new Node(s, top);
-//            System.out.println("Test2");
-//            return;
-//        }
-//
-//
-//        //iterate thru list until we find the spot
-//        while (temp.getNext() != null) {
-//            if (temp.getNext().getData().getBoughtOn().after(s.getBoughtOn())) {
-//                Node newAutoNode = new Node(s, temp.getNext());
-//                System.out.println("T3");
-//                newAutoNode=temp.getNext();
-//                return;
-//            }
-//            System.out.println("T4");
-//            temp = temp.getNext();
-//        }
-//        Node newAutoNode = new Node(s, temp.getNext());
-//        newAutoNode=temp.getNext();
-//        System.out.println("T5");
-//        return;
+        }
     }
 
     /*******************************************************************************************************************
@@ -184,6 +153,7 @@ public class MySingleLinkedList implements Serializable
     public Auto get(int index) {
         Node current = top;
         int count = 0;
+
         //throw exceptions if the index is out of bounds
        if(index < 0 || index >= size()){
            throw new IndexOutOfBoundsException();
