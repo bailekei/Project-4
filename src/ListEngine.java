@@ -86,7 +86,7 @@ public class ListEngine extends AbstractListModel {
             temp3.setTime(d3);
             Date d4 = df.parse("1/20/2019");
             temp4.setTime(d4);
-            Date d5 = df.parse("1/20/2010");
+            Date d5 = df.parse("1/10/2019");
             temp5.setTime(d5);
             Date d6 = df.parse("1/20/2020");
             temp6.setTime(d6);
@@ -100,12 +100,31 @@ public class ListEngine extends AbstractListModel {
             Truck Truck3 = new Truck(temp1,"F350",2000,"EX",true);
 
             add(Car1);
+            for(int i = 0; i < listAutos.size(); i++) {
+                System.out.println(listAutos.get(i).getAutoName());
+                System.out.println();
+            }
+            System.out.println();
             add(Car2);
-            add(Car3);
-            add(Truck1);
-            add(Truck2);
-            add(Truck3);
 
+            System.out.println();
+
+            add(Car3);
+
+            System.out.println();
+
+            add(Truck1);
+
+            System.out.println();
+
+            add(Truck2);
+
+            System.out.println();
+
+            add(Truck3);
+//            for(int i = 0; i < listAutos.size(); i++) {
+//                System.out.println(listAutos.get(i).getAutoName());
+//            }
 
         } catch (ParseException e) {
             throw new RuntimeException("Error in testing, creation of list");

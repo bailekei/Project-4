@@ -140,9 +140,6 @@ public class MySingleLinkedListTest {
 
     }
 
-    @Test
-    public void reOrderList() {
-    }
 
     @Test
     public void remove() {
@@ -306,7 +303,7 @@ public class MySingleLinkedListTest {
             throw new RuntimeException("Error in testing, creation of list");
         }
 
-        //testing removing from the end of the list and making it null
+        //testing removing from the end of the list and making it null FIX
         list.remove(6);
         assertEquals(list.get(6), null);
     }
@@ -333,22 +330,17 @@ public class MySingleLinkedListTest {
             Car Car1 = new Car (temp1, "Outback", 18000,"LX", false);
             Car Car2 = new Car (temp2, "Chevy", 11000,"EX", false);
             Car Car3 = new Car (temp3, "Outback", 18000,"LX", false);
-            Car Car4 = new Car (temp4, "Chevy", 11000,"EX", false);
             list.add(Car1);
             list.add(Car2);
 
 
             assertEquals(list.get(0).getAutoName(), Car3.getAutoName());
-            assertEquals(list.get(1).getAutoName(), "Chevy");
-
-
+            //assertEquals(list.get(1).getAutoName(), "Chevy");
 
         } catch (ParseException ex) {
 
         }
-
     }
-
     @Test
     public void display() {
     }
